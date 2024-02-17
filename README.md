@@ -13,7 +13,7 @@ This project is a React-based web application that allows users to search for Gi
 How to Run the Application
 To run this application locally, follow these steps:
 
-* Clone this repository to your local machine using git clone https://github.com/your-repo-url.git
+* Clone this repository to your local machine using git clone [https://github.com/your-repo-url.git](https://github.com/Akshat171/Github-usersearch.git)
 * Navigate to the project directory: cd github-user-search-app
 * Install dependencies by running: npm install
 * Create a .env file in the root directory and add your GitHub personal access token:
