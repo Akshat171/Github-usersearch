@@ -8,10 +8,12 @@ const Following = () => {
 
   const [page, setPage] = useState(1);
 
+  //profiles per page
   const totalNum = user.following;
   const per_page = 10;
 
-  const baseUrl = user.following_url.replace("{/other_user}", "");
+  //api route for getting all followings
+  const baseUrl = user.following_url.replace("{/other_user}", ""); //logic
 
   const { data, loading, error, startIndex } = GetFetchPages(
     baseUrl,

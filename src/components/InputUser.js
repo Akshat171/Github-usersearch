@@ -33,7 +33,9 @@ export default function InputUser({ onChange, onClick }) {
             ariaLabel: "Enter github username",
           }}
         />
+
         <Button variant="contained" onClick={onClick} color="primary">
+          {/* adding a button go to profile page*/}
           Find
         </Button>
       </Stack>

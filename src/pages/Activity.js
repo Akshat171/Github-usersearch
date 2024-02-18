@@ -8,7 +8,7 @@ const Activity = () => {
 
   const user = useOutletContext();
 
-  const baseUrl = user.events_url.replace("{/privacy}", "");
+  const baseUrl = user.events_url.replace("{/privacy}", ""); //just a logic
   const totalNum = 30; //Last 30 events
   const per_page = 10;
 

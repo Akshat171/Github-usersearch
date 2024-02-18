@@ -11,6 +11,7 @@ const Followers = () => {
   const totalNum = user.followers;
   const per_page = 10;
 
+  //api route for getting all the followers
   const baseUrl = user.followers_url;
 
   const { data, loading, error, startIndex } = GetFetchPages(
@@ -43,6 +44,7 @@ const Followers = () => {
       >
         <div className="list follow">
           {data?.slice(startIndex, startIndex + per_page).map((followers) => {
+            //slice of user profile per page
             return (
               <article className="followers" key={followers.id}>
                 <div>

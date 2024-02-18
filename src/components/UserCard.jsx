@@ -9,6 +9,7 @@ import { lightBlue } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
+//usercard component with props user, id
 const UserCard = ({ user, id }) => {
   const color = lightBlue[800];
 
@@ -37,6 +38,7 @@ const UserCard = ({ user, id }) => {
             color="white"
           >
             {user.login}
+            {/**Username */}
           </Typography>
         </ListItemText>
         <Link to={"/about"}>

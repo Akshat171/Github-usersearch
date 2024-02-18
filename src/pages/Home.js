@@ -7,17 +7,24 @@ import UserCard from "../components/UserCard";
 import Pagination from "@mui/material/Pagination";
 import { Link } from "react-router-dom";
 
+//Start of Main Home page
 const Home = () => {
+  //state for getting the current page
   const [page, setPage] = useState(1);
+
+  //github api
   const url = `https://api.github.com/users`;
 
+  //fetching the data from GetFetch component by providing the URL of api
   const { data, fetchUsers } = GetFetch(url);
-  console.log(data);
+  // console.log(data);
 
+  //fetching aal users one user refresh the page
   useEffect(() => {
     fetchUsers();
   }, []);
 
+  //setting the page in pagination on which clicked event happen
   const selectPageHandler = (event, newPage) => {
     setPage(newPage);
   };
@@ -102,13 +109,13 @@ const Home = () => {
           >
             {data
               ? data
-                  .slice(page * 12 - 12, page * 12)
+                  .slice(page * 12 - 12, page * 12) //fetching/printing only 12 profiles on each page
                   .map((user, id) => <UserCard user={user} key={id} />)
               : "Failed to get the user Please visit to profile page"}
           </Container>
         </Box>
 
-        {data.length > 0 && (
+        {data.length > 0 && ( //Pagination start
           <Pagination
             sx={{ pt: "10px" }}
             count={3}
